@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffd43b">
+<title>Our Little Collection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Newsreader:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><strong>Our Little Collection</strong><small>Eine Karte. Jeden Tag.</small></div>
+  <button class="nav-btn" id="albumBtn">Sammlung <span id="headerCount">0 / 20</span></button>
+</header>
+<main>
+  <section class="hero" id="homeView">
+    <div class="hero-head">
+      <div class="dayline" id="dayLine">Tag 01 von 20</div>
+      <h1>Für Emil.</h1>
+      <p class="intro">Jeden Tag wartet eine neue Karte auf dich. Öffne dein heutiges Pack und füge sie deiner Sammlung hinzu.</p>
+    </div>
+    <div class="pack-area">
+      <button class="pack" id="openPack" aria-label="Heutiges Pack öffnen">
+        <span class="pack-strip"></span>
+        <span class="pack-title">Our Little<br>Collection</span>
+        <span class="pack-number" id="packNumber">01</span>
+        <span class="pack-label" id="packLabel">Eine Karte drin</span>
+      </button>
+    </div>
+    <div class="hero-actions">
+      <div class="today" id="todayText">Heute wartet Karte #01 auf dich.</div>
+      <div class="locked-message hidden" id="lockedMessage"></div>
+      <button class="cta" id="openPackBtn">Pack öffnen</button>
+      <div class="hint" id="hintText">Die nächste Karte erscheint morgen.</div>
+      <button class="album-link" id="albumBtn2">Meine Sammlung ansehen</button>
+    </div>
+  </section>
+  <section class="album hidden" id="albumView">
+    <div class="album-head">
+      <div><h2>Unsere Sammlung</h2><p><span id="albumCount">0</span> / 20 Karten gesammelt</p></div>
+      <button class="nav-btn" id="backBtn">Zurück</button>
+    </div>
+    <div class="progress"><div id="progressFill"></div></div>
+    <div class="album-grid" id="albumGrid"></div>
+  </section>
+</main>
+
+<div class="modal hidden" id="cardModal" aria-hidden="true">
+  <div class="modal-backdrop"></div>
+  <div class="modal-content">
+    <button class="close-modal" id="closeModal" aria-label="Schließen">×</button>
+    <div class="opening-stage" id="openingStage">
+      <div class="tear-pack" id="tearPack">
+        <div class="tp-top"></div>
+        <div class="tp-body"><div class="tp-title">Our Little<br>Collection</div><div class="tp-tag">Öffne mich</div></div>
+      </div>
+      <div class="card-reveal" id="cardReveal"><div class="card-scene" id="cardScene"></div></div>
+    </div>
+    <div class="reveal-actions hidden" id="revealActions"><button class="cta" id="addToAlbum">Zur Sammlung hinzufügen</button></div>
+  </div>
+</div>
+
+<div class="modal hidden" id="detailModal" aria-hidden="true">
+  <div class="modal-backdrop"></div>
+  <div class="detail-content">
+    <button class="close-modal" id="closeDetail" aria-label="Schließen">×</button>
+    <div class="detail-card-wrap" id="detailCardWrap"></div>
+    <p class="flip-hint">Klicke auf die Karte, um sie zu wenden.</p>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
