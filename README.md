@@ -4,7 +4,7 @@ Eine kleine digitale Sammelkarten-Sammlung für Emil.
 
 ## Startdatum
 
-Die erste Karte ist ab **29. September 2026** verfügbar. Danach wird jeden Kalendertag eine weitere Karte freigeschaltet.
+Die erste Karte ist ab **03. Oktober 2026** verfügbar. Danach wird jeden Kalendertag eine weitere Karte freigeschaltet.
 
 Wenn du das Startdatum ändern möchtest, öffne `script.js` und ändere:
 
